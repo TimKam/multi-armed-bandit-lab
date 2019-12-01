@@ -38,6 +38,7 @@ git@git.cs.umu.se:tkampik/multi-armed-bandits.git
 Install the dependencies of the exercise project:
 
 ```
+cd multi-armed-bandits
 pip install -r requirements.txt
 ```
 
@@ -54,13 +55,41 @@ cd multi-armed-bandits
 ```
 
 Open the project in your text editor or development environment.
-Then, create a copy of the file ``hand_in/test_tkampik_jcnieves_bandit.py`` and adjust the name of the copy to reflect your CS IDs.
+Create a new folder in ``hand_in/``. Name it after your CS IDs, for example ``tkampik_jcnieves``:
+
+```
+cd hand_in
+mkdir tkampik_jcnieves
+```
+
+Then, create a copy of the file ``hand_in/tkampik_jcnieves/test_tkampik_jcnieves_bandit.py`` and adjust the name of the copy to reflect your CS IDs.
 
 **Important: Your file must start with ``test_``.**
 
 Open the new file. You will see an implementation of a simple epsilon-greedy bandit.
-Your task is to improve the bandit and so that you can beat its performance reliably.
+Your task is to improve the bandit and so that you can beat the initial bandit's performance reliably.
 Ten simulation runs with 10.000 "pulled arms" each should reduce the accumulated regret by factor X (to be determined).
+To test your implementation, run ``pytest <your-file-name>``.
+Replace ``<your-file-name>`` with the name you have given your file, of course.
+
+## Report
+Once you have achieved satisfactory performance, don't hesitate to improve further ;-), but more importantly, write a short report that describes:
+
+1. how you proceeded;
+
+2. what your results are;
+
+3. how you could improve further.
+
+The report should be approximately one page long; not much shorter, not much longer.
+
+## Obfuscation
+Because you will submit your code to be automatically tested on GitLab, you will need to obfuscate your results there, so others cannot copy from you.
+
+In your directory run ``pyarmor obfuscate <your-file-name>``.
+Replace ``<your-file-name>`` with the name you have given your file, of course.
+Then create a copy of your file somewhere on your hard drive, **but not in the project folder**.
+Later, you will need to submit this copy in [Labres](https://webapps.cs.umu.se/labresults/v2/handin.php?courseid=402), together with the small report.
 
 ## Hand-in
 To hand in the exercise, first add, commit and push your changes (**don't forget to adjust the branch name in the example below**):
@@ -74,3 +103,6 @@ git push
 **Important: NEVER USE THE ``--force`` OPTION WHEN PUSHING A BRANCH!**
 
 Then, go to ``https://git.cs.umu.se/tkampik/multi-armed-bandits/merge_requests`` and create a merge request for your branch.
+Make sure all tests pass for your merge requests.
+Then, add the link to your merge request to your report.
+Hand-in the report and a copy of your code in [Labres](https://webapps.cs.umu.se/labresults/v2/handin.php?courseid=402).
