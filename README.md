@@ -94,7 +94,7 @@ Once you have achieved satisfactory performance, don't hesitate to improve furth
 The report should be approximately one page long; not much shorter, not much longer.
 
 ## Obfuscation
-Because you will submit your code to be automatically tested on GitLab, you will need to obfuscate your results there, so others cannot copy from you.
+Because you will submit your code to be automatically tested on GitHub, you will need to obfuscate your results there, so others cannot copy from you.
 
 1. In your directory, run the following command:
 
