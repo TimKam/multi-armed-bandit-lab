@@ -54,7 +54,7 @@ Check out a new branch and name it after your CS IDs:
 checkout -b <CS-ID-1>-<CS-ID-2>
 ```
 
-**Note: Replace ``<CS-ID-1>-<CS-ID-2>`` with your actual CS IDs.
+**Note:** Replace ``<CS-ID-1>-<CS-ID-2>`` with your actual CS IDs.
 
 Then, navigate into the ``multi-armed-bandits`` directory:
 
