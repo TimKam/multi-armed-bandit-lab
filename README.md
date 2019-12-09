@@ -3,7 +3,7 @@
 # AI Lab 3 Multi-Armed Bandits
 Multi-armed bandits are a simple reinforcement learning method that forms the foundation of many large-scale recommender systems.
 
-To get an overview of multi-armed bandits in their implementation:
+To get an overview of multi-armed bandits in their implementation take a look at:
 
 * ["Towards Data Science" introduction to multi-armed bandits](https://towardsdatascience.com/solving-multiarmed-bandits-a-comparison-of-epsilon-greedy-and-thompson-sampling-d97167ca9a50)
 
@@ -30,7 +30,7 @@ If you don't know either ``git`` or ``Python``, search online for some tutorials
 
 ## Getting Started
 
-Fork the GitHub we use for this exercise: [https://github.com/TimKam/multi-armed-bandit-lab](https://github.com/TimKam/multi-armed-bandit-lab).
+Fork the GitHub repository we use for this exercise: [https://github.com/TimKam/multi-armed-bandit-lab](https://github.com/TimKam/multi-armed-bandit-lab).
 
 Open your command line terminal.
 Clone your fork.
@@ -48,11 +48,13 @@ cd multi-armed-bandits
 pip install -r requirements.txt
 ```
 
-Check out a new branch and name it after your CS IDs, for example like this:
+Check out a new branch and name it after your CS IDs:
 
 ```
-checkout -b tkampik-jcnieves
+checkout -b <CS-ID-1>-<CS-ID-2>
 ```
+
+**Note: Replace ``<CS-ID-1>-<CS-ID-2>`` with your actual CS IDs.
 
 Then, navigate into the ``multi-armed-bandits`` directory:
 
@@ -61,11 +63,11 @@ cd multi-armed-bandits
 ```
 
 Open the project in your text editor or development environment.
-Create a new folder in ``hand_in/``. Name it after your CS IDs, for example ``tkampik_jcnieves``:
+Create a new folder in ``hand_in/``. Name it after your CS IDs:
 
 ```
 cd hand_in
-mkdir tkampik_jcnieves
+mkdir <CS-ID-1>-<CS-ID-2>
 ```
 
 Then, create a copy of the files ``hand_in/tkampik_jcnieves/bandit.py`` and ``hand_in/tkampik_jcnieves/test_runner.py`` and move them into your newly created folders.
