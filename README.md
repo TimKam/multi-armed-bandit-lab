@@ -94,7 +94,11 @@ The report should be approximately one page long; not much shorter, not much lon
 ## Obfuscation
 Because you will submit your code to be automatically tested on GitLab, you will need to obfuscate your results there, so others cannot copy from you.
 
-1. In your directory, run ``pyarmor obfuscate bandit.py``.
+1. In your directory, run the following command:
+
+    ```
+    pyarmor obfuscate --platform windows.x86_64 --platform linux.x86_64 --platform darwin.x86_64 bandit.py
+    ```
 
 2. Then, create a copy of your file somewhere on your hard drive, **but not in the project folder**.
 
@@ -102,9 +106,11 @@ Because you will submit your code to be automatically tested on GitLab, you will
 
 4. To be able to run the tests, rename the ``dist`` directory the obfuscator has generated to ``test``.
 
-5. Then, move the ``test_runner.py`` file to the ``test`` directory.
+5. To make the obfuscated code run on the continuous integration server, create a new directory in the ``test/pytransform/platforms/`` folder. Name this directory ``centos6`` and copy the folder ``x86_64`` from the ``test/pytransform/platforms/linux`` directory into the ``centos6`` directory.
 
-6. Run ``pytest`` in the project's root directory and make sure the tests pass.
+6. Then, move the ``test_runner.py`` file to the ``test`` directory.
+
+7. Run ``pytest`` in the project's root directory and make sure the tests pass.
 
 Later, you will need to submit this copy in [Labres](https://webapps.cs.umu.se/labresults/v2/handin.php?courseid=402), together with the small report.
 
