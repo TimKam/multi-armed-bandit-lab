@@ -1,20 +1,26 @@
 # epsilon-greedy example implementation of a multi-armed bandit
 import random
 
+import simulator
+
 # generic epsilon-greedy bandit
-class Bandit:
+class ReferenceBandit:
     def __init__(self, arms, epsilon=0.1):
         self.arms = arms
         self.epsilon = epsilon
-        self.frequencies, self.sums, self.expected_values = [0] * len(arms)
+        self.frequencies = [0] * len(arms)
+        self.sums = [0] * len(arms)
+        self.expected_values = [0] * len(arms)
 
-    def run(self, expected_values):
+    def run(self):
+        if min(self.frequencies) == 0:
+            return self.arms[self.frequencies.index(min(self.frequencies))]
         if random.random() < self.epsilon:
             return self.arms[random.randint(0, len(self.arms) - 1)]
-        return self.arms[expected_values.index(max(expected_values))]
+        return self.arms[self.expected_values.index(max(self.expected_values))]
 
     def give_feedback(self, arm, reward):
-        arm_index = self.arms.index
+        arm_index = self.arms.index(arm)
         sum = self.sums[arm_index] + reward
         self.sums[arm_index] = sum
         frequency = self.frequencies[arm_index] + 1
@@ -31,7 +37,3 @@ arms = [
     'Configuration e',
     'Configuration f'
 ]
-
-# instantiate bandit
-
-
