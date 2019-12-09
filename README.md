@@ -15,7 +15,7 @@ Also, we will determine the best-performing bandit of all submissions.
 ## Requirements
 You need to have the following software installed and accounts set up to absolve this exercise:
 
-* [Python 3.8](https://www.python.org/);
+* [Python 3.7.x or 3.8.x](https://www.python.org/);
 
 * [git](https://git-scm.com/);
 
