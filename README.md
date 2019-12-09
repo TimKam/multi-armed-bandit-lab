@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/TimKam/multi-armed-bandit-lab.svg?style=svg)](https://circleci.com/gh/TimKam/multi-armed-bandit-lab)
+
 # AI Lab 3 Multi-Armed Bandits
 Multi-armed bandits are a simple reinforcement learning method that forms the foundation of many large-scale recommender systems.
 
