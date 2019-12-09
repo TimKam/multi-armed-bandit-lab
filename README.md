@@ -72,7 +72,7 @@ Then, create a copy of the files ``hand_in/tkampik_jcnieves/bandit.py`` and ``ha
 
 **Important: Keep the names of the files as they are: ``bandit.py`` and ``test_runner.py``.**
 
-Open the your ``bandit.py`` file. You will see an implementation of a simple epsilon-greedy bandit.
+Open your ``bandit.py`` file. You will see an implementation of a simple epsilon-greedy bandit.
 Your task is to improve the bandit and so that you can beat the initial bandit's performance reliably.
 Out of 20 simulation runs with 1.000 "pulled arms" each, your new bandit should outperform the reference bandit by at least 5% (5% more reward gained) in at least 15 runs.
 
