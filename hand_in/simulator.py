@@ -1,4 +1,4 @@
-from random import random
+from random import random, shuffle
 from random import gauss
 
 def generate_reward(arm_index, expected_rewards_approx):
@@ -13,6 +13,7 @@ def simulate(bandit):
         ]
         expected_rewards_approx.append(-5)
         expected_rewards_approx.append(-10)
+        shuffle(expected_rewards_approx)
         for arm_index in range(6):
             acc_rewards[arm_index] = acc_rewards[arm_index] + generate_reward(arm_index, expected_rewards_approx)
 

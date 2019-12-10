@@ -3,7 +3,7 @@
 # AI Lab 3 Multi-Armed Bandits
 Multi-armed bandits are a simple reinforcement learning method that forms the foundation of many large-scale recommender systems.
 
-To get an overview of multi-armed bandits in their implementation:
+To get an overview of multi-armed bandits in their implementation take a look at:
 
 * ["Towards Data Science" introduction to multi-armed bandits](https://towardsdatascience.com/solving-multiarmed-bandits-a-comparison-of-epsilon-greedy-and-thompson-sampling-d97167ca9a50)
 
@@ -30,7 +30,7 @@ If you don't know either ``git`` or ``Python``, search online for some tutorials
 
 ## Getting Started
 
-Fork the GitHub we use for this exercise: [https://github.com/TimKam/multi-armed-bandit-lab](https://github.com/TimKam/multi-armed-bandit-lab).
+Fork the GitHub repository we use for this exercise: [https://github.com/TimKam/multi-armed-bandit-lab](https://github.com/TimKam/multi-armed-bandit-lab).
 
 Open your command line terminal.
 Clone your fork.
@@ -48,11 +48,13 @@ cd multi-armed-bandits
 pip install -r requirements.txt
 ```
 
-Check out a new branch and name it after your CS IDs, for example like this:
+Check out a new branch and name it after your CS IDs:
 
 ```
-checkout -b tkampik-jcnieves
+checkout -b <CS-ID-1>-<CS-ID-2>
 ```
+
+**Note:** Replace ``<CS-ID-1>-<CS-ID-2>`` with your actual CS IDs.
 
 Then, navigate into the ``multi-armed-bandits`` directory:
 
@@ -61,11 +63,11 @@ cd multi-armed-bandits
 ```
 
 Open the project in your text editor or development environment.
-Create a new folder in ``hand_in/``. Name it after your CS IDs, for example ``tkampik_jcnieves``:
+Create a new folder in ``hand_in/``. Name it after your CS IDs:
 
 ```
 cd hand_in
-mkdir tkampik_jcnieves
+mkdir <CS-ID-1>-<CS-ID-2>
 ```
 
 Then, create a copy of the files ``hand_in/tkampik_jcnieves/bandit.py`` and ``hand_in/tkampik_jcnieves/test_runner.py`` and move them into your newly created folders.
@@ -92,9 +94,13 @@ Once you have achieved satisfactory performance, don't hesitate to improve furth
 The report should be approximately one page long; not much shorter, not much longer.
 
 ## Obfuscation
-Because you will submit your code to be automatically tested on GitLab, you will need to obfuscate your results there, so others cannot copy from you.
+Because you will submit your code to be automatically tested on GitHub, you will need to obfuscate your results there, so others cannot copy from you.
 
-1. In your directory, run ``pyarmor obfuscate bandit.py``.
+1. In your directory, run the following command:
+
+    ```
+    pyarmor obfuscate --platform windows.x86_64 --platform linux.x86_64 --platform darwin.x86_64 bandit.py
+    ```
 
 2. Then, create a copy of your file somewhere on your hard drive, **but not in the project folder**.
 
@@ -102,9 +108,11 @@ Because you will submit your code to be automatically tested on GitLab, you will
 
 4. To be able to run the tests, rename the ``dist`` directory the obfuscator has generated to ``test``.
 
-5. Then, move the ``test_runner.py`` file to the ``test`` directory.
+5. To make the obfuscated code run on the continuous integration server, create a new directory in the ``test/pytransform/platforms/`` folder. Name this directory ``centos6`` and copy the folder ``x86_64`` from the ``test/pytransform/platforms/linux`` directory into the ``centos6`` directory.
 
-6. Run ``pytest`` in the project's root directory and make sure the tests pass.
+6. Then, move the ``test_runner.py`` file to the ``test`` directory.
+
+7. Run ``pytest`` in the project's root directory and make sure the tests pass.
 
 Later, you will need to submit this copy in [Labres](https://webapps.cs.umu.se/labresults/v2/handin.php?courseid=402), together with the small report.
 
