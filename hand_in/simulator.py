@@ -2,7 +2,7 @@ from random import random
 from random import gauss
 
 def generate_reward(arm_index, expected_rewards_approx):
-    return gauss(expected_rewards_approx[arm_index], 1) + random() / 2
+    return gauss(expected_rewards_approx[arm_index], 0.5) + random() / 2
 
 def simulate(bandit):
     acc_rewards = [0 for _ in range(6)]
