@@ -20,4 +20,4 @@ def simulate():
 
 def test_performance():
     assert True
-    # assert sum(simulate()) > 15
+    # assert sum(simulate()) > 17
