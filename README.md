@@ -70,7 +70,7 @@ cd hand_in
 mkdir <CS-ID-1>-<CS-ID-2>
 ```
 
-Then, create a copy of the files ``hand_in/tkampik_jcnieves/bandit.py`` and ``hand_in/tkampik_jcnieves/test_runner.py`` and move them into your newly created folders.
+Then, create a copy of the files ``hand_in/tkampik_jcnieves/bandit.py`` and ``hand_in/tkampik_jcnieves/test_runner.py`` and move them into your newly created folders. Rename your ``test_runner.py`` by adding something that resembles your CS IDs, for example ``test_runner_tkampik_jcnieves.py``.
 
 **Important: Keep the names of the files as they are: ``bandit.py`` and ``test_runner.py``.**
 
@@ -80,7 +80,7 @@ Out of 20 simulation runs with 1.000 "pulled arms" each, your new bandit should 
 
 To test your implementation, open your ``test_runner.py`` file.
 Delete the line ``assert True`` (line 21) and remove the comment in front of the next line.
-Then, run ``pytest`` in the repository's root directory.
+Then, run ``pytest``--or in case this does not work: ``python -m pytest``--in the repository's root directory.
 
 ## Report
 Once you have achieved satisfactory performance, don't hesitate to improve further ;-), but more importantly, write a short report that describes:
